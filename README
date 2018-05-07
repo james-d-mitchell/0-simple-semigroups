@@ -1,6 +1,14 @@
 How to use:
 
-Extract the shapes files:
+You will need to have GAP installed with the Semigroups, Images and Ferret packages:
+
+  GAP       : https://github.com/gap-system/gap
+
+  Semigroups: https://github.com/gap-packages/Semigroups
+  Images    : https://github.com/gap-packages/images
+  Ferret    : https://github.com/gap-packages/ferret
+
+Extract the precalculated data files:
 
   tar -xvzf shapes.tar.gz 
 
@@ -13,8 +21,8 @@ pacakge. E.g.
 
   prefix := "/path/to/shapes/folder/shape/shapes-";
 
-Then open GAP and use the Read method to Read the files EnumRZMSShapes.g
-followed by EnumRZMS.g.
+Then open GAP and load the required packages. Then use the `Read` function to read
+the file 'EnumRZMSShapes.g' followed by the file 'EnumRZMS.g'.
 
 The function RZMSMain(k, [G, m, n, anti]) can be used with up to 5 arguments to
 enumerate the 0-simple RZMS of order k. The optional arguments can be either 0 or
