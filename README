@@ -1,0 +1,31 @@
+How to use:
+
+Extract the shapes files:
+
+  tar -xvzf shapes.tar.gz 
+
+Edit line 197 of the file EnumRZMSShapes.g:
+
+  prefix := "/Users/crussell/Desktop/shapes/shapes-";
+
+so that it points to the directory of the shapes folder which is part of this
+pacakge. E.g.
+
+  prefix := "/path/to/shapes/folder/shape/shapes-";
+
+Then open GAP and use the Read method to Read the files EnumRZMSShapes.g
+followed by EnumRZMS.g.
+
+The function RZMSMain(k, [G, m, n, anti]) can be used with up to 5 arguments to
+enumerate the 0-simple RZMS of order k. The optional arguments can be either 0 or
+
+G - a group which the RZMS must be over
+m - the number of rows which the matrix of the RZMS should have
+n - the number of columns which the matrix of the RZMS should have
+anti (default = true) - true indicates that RZMS should be enmumerated up to
+anti-isomorphism. False indicates they should be enumerated up to isomorphism.
+
+setting any of these to 0 or ommitting them implies that you don't want to
+filtered the RZMS of order k by that parameter. If specifying m then you must
+specify G (possibly as 0). If specifying n you must specify G and m. If
+specifying anti you must specify all arguments.
